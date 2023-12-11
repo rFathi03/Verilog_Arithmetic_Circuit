@@ -46,11 +46,11 @@ module full_adder (
 endmodule
 
 module main;
-  reg b0, b1, b2, a0, a1, a2;  // 1-bit values
-  reg S0, S1;
-  wire Y1, Y2, Y3, Y4, Y5, Y6;
-  wire XOR1, XOR2, XOR3;
-  wire sum1, cout1, sum2, cout2, sum3, cout3;
+  reg b0, b1, b2, a0, a1, a2;  // 1-bit values, b2b1b0 represents B, a2a1a0 represents A
+  reg S0, S1; // S0 and S1 represent the selectors
+  wire Y1, Y2, Y3, Y4, Y5, Y6; // the outputs of the 6 multiplexers 
+  wire XOR1, XOR2, XOR3; //the outputs of the 3 XORS
+  wire sum1, cout1, sum2, cout2, sum3, cout3; // the outputs of the 3 Full Adders
 
   multiplexer_4to1 first (
     a0,   // I0
