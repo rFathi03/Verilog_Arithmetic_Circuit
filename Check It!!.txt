@@ -23,7 +23,9 @@ module multiplexer_4to1 ( // declaration of the 4-1 multiplexer that selects bet
 
 endmodule // signifies the end of the multiplexer module
 
-module full_adder (
+module full_adder (// performs the addition of three 1-bit inputs (A, B, and Cin) to produce a 1-bit sum (Sum) and a carry-out (Cout). 
+// It utilizes XOR gates for the sum bits and AND gates for the carry bits, 
+// and the final carry-out is determined by combining the results of multiple AND operations using an OR gate.
   input wire A, B, Cin,  //1-bit data inputs
   output wire Sum, Cout  //Output result
 );
@@ -31,17 +33,17 @@ module full_adder (
   wire X1, X2, X3, X4, X5;
 
   // XOR gates for the sum bits
-  assign X1 = A ^ B;
-  assign Sum = X1 ^ Cin;
+  assign X1 = A ^ B;        // X1 is the XOR of A and B "Sum bit without considering the carry"
+  assign Sum = X1 ^ Cin;   // Sum is the XOR of X1 and Cin "final Sum bit"
 
   // AND gates for the carry bits
-  assign X2 = A & B;
-  assign X3 = X1 & Cin;
-  assign X4 = A & Cin;
-  assign X5 = B & Cin;
+  assign X2 = A & B;           // X2 is the AND of A and B "bit-wise AND for carry generation"
+  assign X3 = X1 & Cin;       // X3 iS the AND of X1 and Cin "bit-wise AND for carry generation"
+  assign X4 = A & Cin;       // X4 the AND of A and Cin "bit-wise AND for carry generation"
+  assign X5 = B & Cin;      // X5 the AND of B and Cin "bit-wise AND for carry generation"
 
   // OR gate to combine carry bits
-  assign Cout = X2 | X3 | X4 | X5;
+  assign Cout = X2 | X3 | X4 | X5; // Cout is the OR of X2, X3, X4, and X5 "final carry-out"
 
 endmodule
 
@@ -115,12 +117,13 @@ module main;
     Y6     // Output Y
   );
 
-// XOR gates (XORing with S0 to get the complement values in the last 2 cases only where S0 = 1)
+// XOR gates (XORing with S0 to get the complement values of the selection inputs in the last 2 cases only when S0 = 1)
   assign XOR1 = S0 ^ Y1;
   assign XOR2 = S0 ^ Y3;
   assign XOR3 = S0 ^ Y5;
 
 // Full adders
+// Add the output of the XORs, the output of the three (even numbers) multiplexers
   full_adder fa1 (
     .A(XOR1),   //A0
     .B(Y2),     //B0
