@@ -45,7 +45,7 @@ module full_adder (// performs the addition of three 1-bit inputs (A, B, and Cin
   // OR gate to combine carry bits
   assign Cout = X2 | X3 | X4 | X5; // Cout is the OR of X2, X3, X4, and X5 "final carry-out"
 
-endmodule
+endmodule // end the declaration of the full adder
 
 module main;
   reg b0, b1, b2, a0, a1, a2;  // 1-bit values, b2b1b0 represents B, a2a1a0 represents A. their values are each stored in a register
