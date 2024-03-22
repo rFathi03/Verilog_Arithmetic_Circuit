@@ -24,12 +24,12 @@ The Verilog code is structured to fulfill the outlined requirements, ensuring ef
 To validate the robustness of our implementation, we've included a comprehensive test bench with 40 test cases. These test cases cover various input values and scenarios, thoroughly examining the circuit's performance under different conditions.
 
 ## Collaborators 
-- Roaa Fathi Nada
+- [Roaa Fathi](https://github.com/rFathi03)
 
-- Selsabeel Asim Ali Elbagir
+- [Selsabeel Asim](https://github.com/SelsabeelA)
 
-- Basma Mahmoud Hashem
+- [Basma Mahmoud](https://github.com/Basma2423)
 
-- Nourhan Mahumoud El-Desouky
+- N[ourhan Mahumoud](https://github.com/NourhanMahmoudd)
 
-- Howida Adel Abd El-Halim
+- [Howida Adel Abd El-Halim](https://github.com/howidaabdelhalim)
