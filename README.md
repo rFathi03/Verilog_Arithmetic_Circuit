@@ -30,6 +30,6 @@ To validate the robustness of our implementation, we've included a comprehensive
 
 - [Basma Mahmoud](https://github.com/Basma2423)
 
-- N[ourhan Mahumoud](https://github.com/NourhanMahmoudd)
+- [Nourhan Mahumoud](https://github.com/NourhanMahmoudd)
 
 - [Howida Adel Abd El-Halim](https://github.com/howidaabdelhalim)
